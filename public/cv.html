@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Aristides Morais — CV</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #111;
+      line-height: 1.55;
+      font-size: 11pt;
+      background: #f5f5f5;
+      padding: 40px 20px;
+    }
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 50px 60px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 26pt;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0a0a0b;
+    }
+    h2 {
+      font-size: 12pt;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #2563EB;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #e4e4e7;
+    }
+    h3 { font-size: 12pt; font-weight: 600; color: #0a0a0b; }
+    p, li { color: #3f3f46; }
+    a { color: #2563EB; text-decoration: none; }
+    ul { list-style: none; }
+    ul li { position: relative; padding-left: 16px; margin-bottom: 4px; }
+    ul li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #2563EB;
+      font-weight: 600;
+    }
+    .header { margin-bottom: 32px; }
+    .header .role { font-size: 13pt; color: #52525B; margin-top: 4px; }
+    .header .contact {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      font-size: 10pt;
+    }
+    .section { margin-bottom: 26px; }
+    .item { margin-bottom: 18px; }
+    .item .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .item .meta {
+      font-size: 10pt;
+      color: #71717A;
+      margin-top: 2px;
+    }
+    .item .desc { margin-top: 6px; font-size: 10.5pt; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 8px 16px;
+      font-size: 10.5pt;
+    }
+    .skills-grid strong { color: #0a0a0b; font-weight: 600; }
+    .langs { display: flex; gap: 24px; font-size: 10.5pt; }
+    .langs strong { color: #0a0a0b; }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .page { box-shadow: none; padding: 40px 50px; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="header">
+      <h1>Aristides Morais</h1>
+      <p class="role">Full-Stack Developer</p>
+      <div class="contact">
+        <span>📧 <a href="mailto:aristidesmorais64@gmail.com">aristidesmorais64@gmail.com</a></span>
+        <span>📱 +244 927 051 064</span>
+        <span>📍 Luanda, Angola</span>
+        <span>💼 <a href="https://www.linkedin.com/in/aristides-morais-892530353" target="_blank">LinkedIn</a></span>
+        <span>💻 <a href="https://github.com/Aristides-Morais" target="_blank">GitHub</a></span>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Perfil</h2>
+      <p>
+        Full-Stack Developer com foco em construir aplicações web funcionais para contextos
+        reais. Experiência prática em Python e Flask no backend, SQLite em cenários
+        offline-first, e Next.js/React no frontend. Interesse particular em arquitetura
+        limpa, segurança e software que funciona sem depender de infraestrutura externa.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Experiência</h2>
+
+      <div class="item">
+        <div class="top">
+          <h3>Full-Stack Developer (Independente)</h3>
+          <span class="meta">2024 — Presente</span>
+        </div>
+        <p class="meta">Trabalho independente — Luanda, Angola</p>
+        <p class="desc">
+          Desenvolvimento de aplicações web completas, da compreensão do problema ao
+          deploy em produção. Foco em software funcional para contextos reais de negócio.
+        </p>
+        <ul style="margin-top: 8px; font-size: 10.5pt;">
+          <li>Desenvolvimento do <strong>MinhaLojaPOS</strong> — sistema de gestão de vendas completo com licenciamento offline</li>
+          <li>Construção do portfólio profissional em Next.js + TypeScript</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="top">
+          <h3>Aprendizagem e Projetos Pessoais</h3>
+          <span class="meta">2023 — 2024</span>
+        </div>
+        <p class="meta">Autodidata — Luanda, Angola</p>
+        <p class="desc">
+          Formação contínua em desenvolvimento web full-stack — fundamentos, projetos
+          práticos e evolução técnica constante através da construção de software real.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Projetos em Destaque</h2>
+
+      <div class="item">
+        <div class="top">
+          <h3>MinhaLojaPOS</h3>
+          <span class="meta">Sistema de Gestão / POS</span>
+        </div>
+        <p class="desc">
+          Sistema completo de gestão de vendas que corre localmente, acessível pelo
+          navegador, sem depender de internet nem de servidores externos. Inclui ponto de
+          venda, gestão de stock, emissão de facturas, relatórios e licenciamento offline
+          baseado em HMAC-SHA256 com ID único de máquina.
+        </p>
+      </div>
+
+      <div class="item">
+        <div class="top">
+          <h3>Portfólio Pessoal</h3>
+          <span class="meta">Website / Case Study</span>
+        </div>
+        <p class="desc">
+          Aplicação Next.js 16 com TypeScript e Tailwind v4, design system próprio em
+          dark mode, componentes reutilizáveis, SEO estruturado e deploy em produção.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Competências Técnicas</h2>
+      <div class="skills-grid">
+        <strong>Linguagens</strong>
+        <span>Python · JavaScript · TypeScript · HTML5 · CSS3 · SQL</span>
+
+        <strong>Backend</strong>
+        <span>Flask · Jinja2 · Werkzeug · APIs REST</span>
+
+        <strong>Frontend</strong>
+        <span>React · Next.js · Tailwind CSS</span>
+
+        <strong>Base de Dados</strong>
+        <span>SQLite</span>
+
+        <strong>Segurança</strong>
+        <span>HMAC-SHA256 · Hashing de senhas · Licenciamento offline</span>
+
+        <strong>Ferramentas</strong>
+        <span>Git · GitHub · VS Code · PyInstaller · PowerShell</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Idiomas</h2>
+      <div class="langs">
+        <span><strong>Português</strong> — Nativo</span>
+        <span><strong>Inglês</strong> — Conversação</span>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
