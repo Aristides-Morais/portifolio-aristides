@@ -40,7 +40,7 @@ export function TerminalHero() {
           aristides@dev — terminal
         </span>
       </div>
-      <div className="p-5 font-mono text-sm leading-relaxed min-h-[320px]">
+      <div className="p-4 md:p-5 font-mono text-xs md:text-sm leading-relaxed min-h-[320px] overflow-x-auto">
         {lines.slice(0, visible).map((l, i) => (
           <div key={i} className="flex gap-3">
             <span className="text-accent select-none shrink-0">{l.prompt}</span>

@@ -89,18 +89,43 @@ export default async function ProjectPage({ params }: { params: Params }) {
                 )}
               </div>
             )}
+
+            {/* CAIXA DE CREDENCIAIS PARA O ZENDA */}
+            {project.slug === "zenda" && (
+              <div className="mt-6 rounded-lg border border-border bg-bg-surface p-4 inline-block text-sm">
+                <p className="font-semibold text-text mb-2">🔐 Credenciais da Demo:</p>
+                <p className="text-text-muted font-mono">Email: dono@zenda.app</p>
+                <p className="text-text-muted font-mono">Password: password123</p>
+              </div>
+            )}
           </div>
         </Reveal>
 
+        {/* SECÇÃO DE IMAGENS / GALERIA ATUALIZADA */}
         {project.screenshots.length > 0 && (
           <Reveal>
-            <div className="mt-14 rounded-xl border border-border overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={project.screenshots[0]}
-                alt={`Screenshot de ${project.name}`}
-                className="w-full h-auto"
-              />
+            <div className="mt-14 space-y-6">
+              <div className="rounded-xl border border-border overflow-hidden">
+                <img
+                  src={project.screenshots[0]}
+                  alt={`Screenshot principal de ${project.name}`}
+                  className="w-full h-auto"
+                />
+              </div>
+              
+              {project.screenshots.length > 1 && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {project.screenshots.slice(1).map((src, i) => (
+                    <div key={i} className="rounded-xl border border-border overflow-hidden">
+                      <img
+                        src={src}
+                        alt={`Screenshot ${i + 2} de ${project.name}`}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </Reveal>
         )}

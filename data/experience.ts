@@ -16,9 +16,9 @@ export const experiences: Experience[] = [
     description:
       "Desenvolvimento de aplicações web completas, da compreensão do problema ao deploy em produção. Foco em software funcional para contextos reais de negócio.",
     highlights: [
-      "Desenvolvimento do MinhaLojaPOS — sistema de gestão de vendas completo com licenciamento offline",
-      "Construção deste portfólio profissional em Next.js + TypeScript",
-      "[ADICIONAR OUTRO PROJETO / RESULTADO REAL]",
+      "Desenvolvimento do Zenda — plataforma SaaS multi-tenant para gestão de pequenos negócios",
+      "Desenvolvimento do MinhaLojaPOS — sistema de gestão de vendas offline com licenciamento HMAC-SHA256",
+      "Construção deste portfólio profissional em Next.js 16 + TypeScript + Tailwind",
     ],
   },
   {
@@ -29,8 +29,8 @@ export const experiences: Experience[] = [
     description:
       "Formação contínua em desenvolvimento web full-stack — fundamentos, projetos práticos e evolução técnica constante através da construção de software real.",
     highlights: [
-      "[ADICIONAR TECNOLOGIA/ÁREA ESTUDADA]",
-      "[ADICIONAR PROJETO PRÁTICO]",
+      "Estudo aprofundado de React, TypeScript, Node.js, Express e PostgreSQL",
+      "Construção do Zenda, aplicando conceitos avançados de autenticação JWT, transações SQL e arquitetura multi-tenant",
     ],
   },
 ];

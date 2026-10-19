@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowRight, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -17,9 +18,20 @@ export function Hero() {
       <Container className="relative">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <div>
-            <Badge variant="dot">{site.availability.label}</Badge>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-accent/20 shrink-0 shadow-lg shadow-accent/10">
+                <Image
+                  src="/images/aristides-morais-800.webp"
+                  alt="Aristides Morais"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <Badge variant="dot">{site.availability.label}</Badge>
+            </div>
 
-            <h1 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-[1.05]">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-[1.05]">
               Construo aplicações web que{" "}
               <span className="text-accent">resolvem problemas reais</span>.
             </h1>

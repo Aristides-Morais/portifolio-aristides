@@ -17,7 +17,7 @@ export function FeaturedProjects() {
             <SectionHeading
               eyebrow="Projetos"
               title="Trabalho em destaque"
-              description="Dois exemplos concretos do que construo — software de gestão real e o próprio portfólio."
+              description="Alguns exemplos concretos do que construo — SaaS, sistemas offline e o próprio portfólio."
             />
             <Link
               href="/projects"
@@ -55,7 +55,7 @@ export function FeaturedProjects() {
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {p.stack.map((tech) => (
+                  {p.stack.slice(0, 5).map((tech) => (
                     <span
                       key={tech}
                       className="text-xs font-mono text-text-subtle px-2 py-1 rounded border border-border"
@@ -63,6 +63,11 @@ export function FeaturedProjects() {
                       {tech}
                     </span>
                   ))}
+                  {p.stack.length > 5 && (
+                    <span className="text-xs font-mono text-text-subtle px-2 py-1">
+                      +{p.stack.length - 5}
+                    </span>
+                  )}
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-border flex items-center gap-2 text-sm text-accent">

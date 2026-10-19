@@ -67,7 +67,15 @@ export const projects: Project[] = [
       "Uma plataforma SaaS totalmente funcional e em produção, capaz de gerir múltiplos negócios de forma segura e com performance otimizada.",
     lessons:
       "A complexidade de um SaaS real vai muito além do frontend. Resolver problemas de infraestrutura, CORS, cookies e consistência de dados (transações) foi o que realmente me preparou para desafios de nível profissional.",
-    screenshots: [],
+    screenshots: [
+      "/projects/zenda/dashboard.png",
+      "/projects/zenda/dashboard2.png",
+      "/projects/zenda/produtos.png",
+      "/projects/zenda/vendas.png",
+      "/projects/zenda/clientes.png",
+      "/projects/zenda/despesas.png",
+      "/projects/zenda/faturacao.png",
+    ],
     liveDemo: "https://zenda-83pw.vercel.app",
     github: "https://github.com/Aristides-Morais/zenda",
     year: "2026",
@@ -119,7 +127,14 @@ export const projects: Project[] = [
       "Software funcional, distribuído num único executável, capaz de operar autonomamente sem internet em ambiente real de loja.",
     lessons:
       "Trabalhar offline-first força decisões de arquitetura mais rigorosas — cada dependência externa é um risco.",
-    screenshots: [],
+    screenshots: [
+      "/projects/minhalojapos/carrinho.png",
+      "/projects/minhalojapos/factura.png",
+      "/projects/minhalojapos/relatorio.png",
+      "/projects/minhalojapos/admin.png",
+      "/projects/minhalojapos/admin2.png",
+      "/projects/minhalojapos/ativacao.png",
+    ],
     liveDemo: undefined,
     github: undefined,
     year: "2025",
@@ -152,7 +167,7 @@ export const projects: Project[] = [
     liveDemo: undefined,
     github: "https://github.com/Aristides-Morais",
     year: "2026",
-    featured: false, // Deixamos os 2 primeiros destacados na Home
+    featured: false,
   },
 ];
 
