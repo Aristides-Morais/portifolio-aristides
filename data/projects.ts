@@ -68,7 +68,6 @@ export const projects: Project[] = [
     lessons:
       "A complexidade de um SaaS real vai muito além do frontend. Resolver problemas de infraestrutura, CORS, cookies e consistência de dados (transações) foi o que realmente me preparou para desafios de nível profissional.",
     screenshots: [
-      "/projects/zenda/dashboard.png",
       "/projects/zenda/dashboard2.png",
       "/projects/zenda/produtos.png",
       "/projects/zenda/vendas.png",

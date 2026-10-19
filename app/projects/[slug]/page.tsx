@@ -101,7 +101,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
           </div>
         </Reveal>
 
-        {/* SECÇÃO DE IMAGENS / GALERIA ATUALIZADA */}
+        {/* GALERIA DE IMAGENS */}
         {project.screenshots.length > 0 && (
           <Reveal>
             <div className="mt-14 space-y-6">
