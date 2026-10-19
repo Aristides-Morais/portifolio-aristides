@@ -21,17 +21,70 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "zenda",
+    name: "Zenda",
+    category: "SaaS / Full-Stack",
+    summary:
+      "Plataforma SaaS multi-tenant para gestão de pequenos negócios (vendas, stock e despesas) com dashboard em tempo real.",
+    problem:
+      "Pequenos negócios em Angola (mercearias, salões, restaurantes) gerem stock, vendas e despesas em cadernos de papel, perdendo dinheiro por falta de controlo e cálculo errado de lucro.",
+    goal:
+      "Criar um SaaS acessível e completo que permitisse a qualquer pequeno negócio modernizar a sua gestão e ter visibilidade real do seu lucro.",
+    solution:
+      "Desenvolvi uma aplicação full-stack com arquitetura multi-tenant, autenticação segura (JWT + httpOnly cookies) e dashboard dinâmico. O sistema isola os dados por empresa (row-level security) e utiliza transações SQL para garantir a integridade do stock durante as vendas.",
+    stack: [
+      "React",
+      "Vite",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma ORM",
+      "JWT",
+      "Argon2",
+      "Recharts",
+    ],
+    features: [
+      "Arquitetura Multi-tenant com isolamento total de dados por empresa",
+      "Autenticação segura com Access Tokens em memória e Refresh Tokens em cookies httpOnly",
+      "Gestão de vendas com transações SQL (rollback automático se o stock for insuficiente)",
+      "Paywall SaaS com limites no plano FREE (máx. 50 produtos) e ilimitado no PRO",
+      "Dashboard dinâmico com KPIs em tempo real e gráficos de evolução (Recharts)",
+    ],
+    challenges: [
+      "Garantir o isolamento total de dados entre empresas (row-level security) em todas as queries do Prisma.",
+      "Manter a integridade do stock durante vendas concorrentes utilizando transações do Prisma ($transaction).",
+      "Configurar CORS e cookies cross-domain (SameSite=None) entre o frontend na Vercel e o backend na Render.",
+    ],
+    decisions: [
+      "Uso de Prisma ORM com extensões para garantir filtros obrigatórios por businessId.",
+      "Implementação de JWT com Refresh Tokens em cookies httpOnly (SameSite=None) para mitigar XSS e CSRF.",
+      "React + Vite no frontend para uma SPA rápida, com Recharts para visualização de dados.",
+      "Base de dados PostgreSQL serverless alojada na Neon.",
+    ],
+    result:
+      "Uma plataforma SaaS totalmente funcional e em produção, capaz de gerir múltiplos negócios de forma segura e com performance otimizada.",
+    lessons:
+      "A complexidade de um SaaS real vai muito além do frontend. Resolver problemas de infraestrutura, CORS, cookies e consistência de dados (transações) foi o que realmente me preparou para desafios de nível profissional.",
+    screenshots: [],
+    liveDemo: "https://zenda-83pw.vercel.app",
+    github: "https://github.com/Aristides-Morais/zenda",
+    year: "2026",
+    featured: true,
+  },
+  {
     slug: "minhalojapos",
     name: "MinhaLojaPOS",
     category: "Sistema de Gestão / POS",
     summary:
       "Sistema completo de gestão de vendas que corre localmente, acessível pelo navegador, sem depender de internet nem de servidores externos.",
     problem:
-      "Soluções POS acessíveis, robustas e autónomas são escassas para comerciantes que não podem depender de infraestrutura de rede ou de serviços cloud pagos. Muitas lojas locais operam sem internet estável mas precisam de registar vendas, controlar stock e emitir facturas de forma fiável.",
+      "Soluções POS acessíveis, robustas e autónomas são escassas para comerciantes que não podem depender de infraestrutura de rede ou de serviços cloud pagos.",
     goal:
-      "Construir um sistema de ponto de venda completo que funcionasse offline, fosse fácil de instalar num único ficheiro e protegesse comercialmente o software sem exigir validação online.",
+      "Construir um sistema de ponto de venda completo que funcionasse offline, fosse fácil de instalar num único ficheiro e protegesse comercialmente o software.",
     solution:
-      "Desenvolvi o MinhaLojaPOS — uma aplicação Flask empacotada num único executável Windows. O sistema inclui ponto de venda, gestão de stock, emissão de facturas, relatórios e autenticação. Para a proteção comercial, implementei um sistema de licenciamento offline baseado em HMAC-SHA256 com ID único de máquina — sem necessitar de qualquer servidor ou ligação à internet.",
+      "Desenvolvi o MinhaLojaPOS — uma aplicação Flask empacotada num único executável Windows. O sistema inclui ponto de venda, gestão de stock, emissão de facturas, relatórios e autenticação, com licenciamento offline baseado em HMAC-SHA256.",
     stack: [
       "Python 3",
       "Flask",
@@ -51,23 +104,21 @@ export const projects: Project[] = [
       "Relatórios por forma de pagamento, produtos mais vendidos e totais diários",
       "Autenticação com senhas encriptadas (hashing) e alteração de senha",
       "Licenciamento offline por ID único de máquina, sem internet",
-      "Design responsivo para desktop, tablet e telemóvel",
     ],
     challenges: [
       "Criar um mecanismo de licenciamento funcional sem qualquer ligação à internet",
-      "Garantir que a chave secreta de geração de licenças fosse única por instalação e não pudesse ser extraída do executável",
+      "Garantir que a chave secreta de geração de licenças fosse única por instalação",
       "Empacotar toda a aplicação (Flask + templates + base de dados + assets) num único ficheiro .exe",
     ],
     decisions: [
       "Flask em vez de Django por ser mais leve e suficiente para uma aplicação local desktop-like",
       "SQLite em vez de PostgreSQL/MySQL por ser embutido, sem servidor e ideal para operação offline",
       "PyInstaller com --onefile --windowed para simplificar a distribuição ao cliente final",
-      "HMAC-SHA256 para licenciamento por ser criptograficamente robusto e não exigir servidor de validação",
     ],
     result:
-      "Software funcional, distribuído num único executável, capaz de operar autonomamente sem internet em ambiente real de loja. Proteção comercial implementada sem depender de servidores externos.",
+      "Software funcional, distribuído num único executável, capaz de operar autonomamente sem internet em ambiente real de loja.",
     lessons:
-      "Trabalhar offline-first força decisões de arquitetura mais rigorosas — cada dependência externa é um risco. Este projeto consolidou-me a importância de escolher ferramentas simples que resolvem problemas complexos.",
+      "Trabalhar offline-first força decisões de arquitetura mais rigorosas — cada dependência externa é um risco.",
     screenshots: [],
     liveDemo: undefined,
     github: undefined,
@@ -81,37 +132,27 @@ export const projects: Project[] = [
     summary:
       "Este próprio portfólio — construído com Next.js, TypeScript e Tailwind. Ele próprio serve como prova técnica das minhas capacidades.",
     problem:
-      "Precisava de uma presença profissional que demonstrasse, na prática, a minha capacidade de construir produtos web — não apenas descrevesse.",
+      "Precisava de uma presença profissional que demonstrasse, na prática, a minha capacidade de construir produtos web.",
     goal:
       "Criar um portfólio que funcionasse ele próprio como prova técnica: arquitetura limpa, performance, SEO, acessibilidade e design cuidado.",
     solution:
-      "Construí uma aplicação Next.js 16 com TypeScript e Tailwind v4, design system próprio em dark mode, componentes reutilizáveis, animações respeitando prefers-reduced-motion, SEO estruturado e deploy em produção.",
+      "Construí uma aplicação Next.js 16 com TypeScript e Tailwind v4, design system próprio em dark mode, componentes reutilizáveis, SEO estruturado e deploy em produção.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
     features: [
       "Design system com dark/light mode",
-      "Componentes reutilizáveis (Button, SectionHeading, Reveal)",
+      "Componentes reutilizáveis",
       "SEO completo com metadata por página",
-      "Acessibilidade (focus visível, semantic HTML, reduced motion)",
-      "Performance otimizada",
+      "Acessibilidade e performance otimizadas",
     ],
-    challenges: [
-      "Manter identidade visual consistente em todas as páginas sem duplicar código",
-      "Garantir contraste e legibilidade simultaneamente em dark e light mode",
-    ],
-    decisions: [
-      "Next.js App Router pela SEO nativa e simplicidade de rotas",
-      "Tailwind v4 pelo design system estar centralizado em CSS variables",
-      "Sem UI kits externos — tudo construído à medida para manter identidade",
-    ],
-    result:
-      "Portfólio publicado, rápido, acessível e preparado para crescer com novos projetos.",
-    lessons:
-      "Construir o próprio portfólio ensina mais sobre produto do que qualquer tutorial.",
+    challenges: ["Manter identidade visual consistente sem duplicar código"],
+    decisions: ["Next.js App Router pela SEO nativa e simplicidade de rotas"],
+    result: "Portfólio publicado, rápido e preparado para crescer.",
+    lessons: "Construir o próprio portfólio ensina mais sobre produto do que qualquer tutorial.",
     screenshots: [],
     liveDemo: undefined,
     github: "https://github.com/Aristides-Morais",
     year: "2026",
-    featured: true,
+    featured: false, // Deixamos os 2 primeiros destacados na Home
   },
 ];
 
