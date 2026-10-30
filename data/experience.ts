@@ -9,28 +9,30 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    role: "Full-Stack Developer (Independente)",
+    role: "Programador Full Stack (Independente)",
     company: "Trabalho independente",
-    period: "2024 — Presente",
+    period: "2023 — Presente",
     location: "Luanda, Angola",
     description:
-      "Desenvolvimento de aplicações web completas, da compreensão do problema ao deploy em produção. Foco em software funcional para contextos reais de negócio.",
+      "Desenvolvimento de aplicações web completas, sistemas de gestão e soluções tecnológicas orientadas a problemas reais. Experiência prática em Frontend, Backend, bases de dados e integração de sistemas.",
     highlights: [
-      "Desenvolvimento do Zenda — plataforma SaaS multi-tenant para gestão de pequenos negócios",
-      "Desenvolvimento do MinhaLojaPOS — sistema de gestão de vendas offline com licenciamento HMAC-SHA256",
-      "Construção deste portfólio profissional em Next.js 16 + TypeScript + Tailwind",
+      "Desenvolvimento do Zenda — plataforma SaaS multi-tenant para gestão de pequenos negócios.",
+      "Desenvolvimento do MinhaLojaPOS — sistema de ponto de venda offline com gestão de stock e dívidas.",
+      "Desenvolvimento do Portfólio Profissional para Maria Graça (Cabeleireira) — website personalizado com Flask e Jinja2.",
+      "Construção deste portfólio profissional em Next.js 16 + TypeScript + Tailwind.",
     ],
   },
   {
-    role: "Aprendizagem e Projetos Pessoais",
+    role: "Formação e Projectos Pessoais",
     company: "Autodidata",
-    period: "2023 — 2024",
+    period: "2022 — 2023",
     location: "Luanda, Angola",
     description:
-      "Formação contínua em desenvolvimento web full-stack — fundamentos, projetos práticos e evolução técnica constante através da construção de software real.",
+      "Formação contínua em desenvolvimento web full-stack, fundamentos de programação e evolução técnica através da construção de software real.",
     highlights: [
-      "Estudo aprofundado de React, TypeScript, Node.js, Express e PostgreSQL",
-      "Construção do Zenda, aplicando conceitos avançados de autenticação JWT, transações SQL e arquitetura multi-tenant",
+      "Estudo aprofundado de Python, React, Node.js, Express e PostgreSQL.",
+      "Aprendizagem autónoma de Python através de aulas online (Prof. Gustavo Guanabara).",
+      "Desenvolvimento de projetos práticos para consolidação de conhecimentos.",
     ],
   },
 ];
