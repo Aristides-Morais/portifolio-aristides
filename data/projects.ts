@@ -140,34 +140,42 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-  slug: "portfolio-maria-graca",
-  name: "Portfólio Maria Graça",
-  category: "Website para Cliente",
-  summary:
-    "Website profissional personalizado para Maria Graça Gamboa Simão, profissional de cabeleireiro e beleza com mais de 20 anos de experiência.",
-  problem:
-    "A cliente precisava de uma presença online profissional para apresentar os seus serviços e organizar os seus conteúdos de forma elegante.",
-  goal:
-    "Criar uma identidade visual digital adaptada à atividade e uma estrutura de páginas profissional e responsiva.",
-  solution:
-    "Desenvolvi um website personalizado utilizando Python e Flask no backend, com templates Jinja2, HTML e CSS no frontend. O foco foi a organização de conteúdos e a apresentação dos serviços de forma profissional.",
-  stack: ["Python", "Flask", "HTML", "CSS", "Jinja2"],
-  features: [
-    "Website profissional personalizado",
-    "Apresentação de serviços de beleza",
-    "Organização e estruturação de conteúdos",
-    "Identidade visual adaptada à atividade",
-  ],
-  challenges: ["Adaptar a identidade visual à área de estética e beleza."],
-  decisions: ["Uso de Flask e Jinja2 pela simplicidade de deploy e gestão de templates."],
-  result: "Website entregue e funcional para a cliente.",
-  lessons: "Trabalhar diretamente com o cliente exige comunicação clara e foco nas necessidades reais do negócio.",
-  screenshots: [], // [c:\Users\Da Morte\Pictures\Screenshots\Portfolio Graça\Screenshot_20261022-110621 (1).png c:\Users\Da Morte\Pictures\Screenshots\Portfolio Graça\Screenshot_20261022-110555 (1).png c:\Users\Da Morte\Pictures\Screenshots\Portfolio Graça\Screenshot_20261022-110616 (1).png]
-  liveDemo: undefined,
-  github: undefined,
-  year: "2026",
-  featured: false,
-},
+    slug: "portfolio-maria-graca",
+    name: "Portfólio Maria Graça",
+    category: "Website para Cliente",
+    summary:
+      "Website profissional personalizado para Maria Graça Gamboa Simão, profissional de cabeleireiro e beleza com mais de 20 anos de experiência.",
+    problem:
+      "A cliente precisava de uma presença online profissional para apresentar os seus serviços e organizar os seus conteúdos de forma elegante.",
+    goal:
+      "Criar uma identidade visual digital adaptada à atividade e uma estrutura de páginas profissional e responsiva.",
+    solution:
+      "Desenvolvi um website personalizado utilizando Python e Flask no backend, com templates Jinja2, HTML e CSS no frontend. O foco foi a organização de conteúdos e a apresentação dos serviços de forma profissional.",
+    stack: ["Python", "Flask", "HTML", "CSS", "Jinja2"],
+    features: [
+      "Website profissional personalizado",
+      "Apresentação de serviços de beleza",
+      "Organização e estruturação de conteúdos",
+      "Identidade visual adaptada à atividade",
+    ],
+    challenges: [
+      "Adaptar a identidade visual à área de estética e beleza."
+    ],
+    decisions: [
+      "Uso de Flask e Jinja2 pela simplicidade de deploy e gestão de templates."
+    ],
+    result: "Website entregue e funcional para a cliente.",
+    lessons: "Trabalhar diretamente com o cliente exige comunicação clara e foco nas necessidades reais do negócio.",
+    screenshots: [
+      "/projects/portfolio-maria-graca/pagina.png",
+      "/projects/portfolio-maria-graca/contato.png",
+      "/projects/portfolio-maria-graca/contato2.png",
+    ],
+    liveDemo: undefined,
+    github: undefined,
+    year: "2026",
+    featured: true, 
+  },
   {
     slug: "portifolio-pessoal",
     name: "Portfólio Pessoal",
