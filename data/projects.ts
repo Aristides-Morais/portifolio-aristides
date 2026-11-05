@@ -21,6 +21,60 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "kanda",
+    name: "Kanda",
+    category: "E-commerce / Full-Stack",
+    summary:
+      "Plataforma de e-commerce completa desenhada como a montra online dos negócios geridos pelo Zenda, com sincronização de stock em tempo real.",
+    problem:
+      "Os negócios que usam o Zenda precisavam de uma presença online para vender, mas criar uma loja separada causaria problemas de stock duplicado (vender online algo que já saiu no balcão físico) e exigiria gerir dois sistemas diferentes.",
+    goal:
+      "Criar uma loja online (Kanda) que partilhasse a mesma base de dados e API do Zenda, permitindo que o cliente final comprasse online e o dono da loja gerisse os pedidos no mesmo painel que já usava.",
+    solution:
+      "Desenvolvi o Kanda e o Zenda numa arquitetura Monorepo. A loja online foi construída em React, consumindo a mesma API do Zenda. No checkout, utilizei transações ACID ($transaction do Prisma) para garantir que a encomenda é criada e o stock é reduzido de forma atómica, evitando vendas duplicadas.",
+    stack: [
+      "React 19",
+      "Vite",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Router",
+      "Node.js",
+      "Express",
+      "Zod",
+      "PostgreSQL (Neon)",
+      "Prisma ORM",
+      "Docker",
+      "pnpm (Monorepo)",
+    ],
+    features: [
+      "Catálogo de produtos responsivo com imagens e stock em tempo real",
+      "Carrinho de compras com cálculo automático de totais",
+      "Checkout seguro com validação de dados no backend via Zod",
+      "Ecrã de 'Pedido Confirmado' animado e focado na experiência do utilizador",
+      "Painel de gestão de pedidos e catálogo (integrado no Zenda)",
+      "Baixa automática de stock via transações SQL ACID após a compra",
+    ],
+    challenges: [
+      "Sincronizar o stock entre duas aplicações diferentes (loja online e balcão físico) sem race conditions.",
+      "Gerir a autenticação e isolamento de dados multi-tenant para que a loja mostre apenas os produtos do respetivo negócio.",
+      "Configurar CORS avançado para permitir pedidos seguros de dois domínios distintos (Kanda e Zenda).",
+    ],
+    decisions: [
+      "Arquitetura Monorepo com pnpm para partilhar código de backend e tipos TypeScript entre Zenda e Kanda.",
+      "Uso de $transaction do Prisma no checkout para garantir integridade referencial e consistência do stock (rollback em caso de erro).",
+      "Separação dos deploys frontend na Vercel, mas mantendo um único backend centralizado na Render.",
+    ],
+    result:
+      "Uma plataforma de e-commerce totalmente funcional e integrada ao ecossistema Zenda, permitindo aos comerciantes vender online sem dores de cabeça operacionais.",
+    lessons:
+      "Trabalhar com Monorepos e transações ACID exige um rigor técnico elevado. A consistência de dados é o pilar de qualquer sistema de e-commerce e, resolvê-la na base de dados, evita inúmeros bugs no frontend.",
+    screenshots: [], // Vazio porque não vais colocar fotos
+    liveDemo: "https://kanda-web-cyan.vercel.app",
+    github: "https://github.com/Aristides-Morais/zenda",
+    year: "2026",
+    featured: true,
+  },
+  {
     slug: "zenda",
     name: "Zenda",
     category: "SaaS / Full-Stack",
@@ -137,7 +191,7 @@ export const projects: Project[] = [
     liveDemo: undefined,
     github: undefined,
     year: "2025",
-    featured: true,
+    featured: false,
   },
   {
     slug: "portfolio-maria-graca",
@@ -174,7 +228,7 @@ export const projects: Project[] = [
     liveDemo: undefined,
     github: undefined,
     year: "2026",
-    featured: true, 
+    featured: false, 
   },
   {
     slug: "portifolio-pessoal",
