@@ -130,16 +130,6 @@ export default async function ProjectPage({ params }: { params: Params }) {
           </Reveal>
         )}
 
-        {project.screenshots.length === 0 && (
-          <Reveal>
-            <div className="mt-14 rounded-xl border border-dashed border-border-strong bg-bg-surface/50 p-16 text-center">
-              <p className="text-sm font-mono text-text-subtle">
-                [ SCREENSHOTS A ADICIONAR EM /public/projects/{project.slug}/ ]
-              </p>
-            </div>
-          </Reveal>
-        )}
-
         <div className="mt-16 grid gap-16 lg:grid-cols-[1fr_280px]">
           <div className="space-y-12">
             <Reveal>
