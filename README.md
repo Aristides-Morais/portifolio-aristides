@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio Profissional - Aristides Morais
 
-## Getting Started
+Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar os meus projetos, competências técnicas e a minha evolução como Desenvolvedor Full-Stack.
 
-First, run the development server:
+## 🚀 Demo Online
+Podes visitar a versão em produção aqui: [https://portifolio-aristides.vercel.app](https://portifolio-aristides.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠️ Stack Tecnológica
+- **Framework:** Next.js (App Router)
+- **Linguagem:** TypeScript
+- **Estilização:** Tailwind CSS
+- **Deploy:** Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Funcionalidades
+- Design moderno, minimalista e totalmente responsivo (Mobile-First).
+- Secções dedicadas à minha experiência, competências e projetos.
+- Integração direta com os links da demo online e repositórios.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💻 Como correr localmente
+1. Clone o repositório: `git clone https://github.com/Aristides-Morais/portifolio-aristides.git`
+2. Instale as dependências: `pnpm install` (ou `npm install`)
+3. Arranque o servidor: `pnpm dev`
+4. Abra `http://localhost:3000` no seu browser.
